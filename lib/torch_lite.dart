@@ -32,7 +32,7 @@ class _torchState extends State<torch> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(isActive ? "" : "",
+                  Image.asset(isActive ? "assets/on.jpg" : "assets/off.jpg",
                     width: 200,
                     height: 20,
                     color: isActive ? null : textColor.withOpacity(0.2),
@@ -53,8 +53,7 @@ class _torchState extends State<torch> {
 
                           });
                         },
-                        icon: Icon(Icons.power_settings_new
-                        ),
+                        icon: const Icon(Icons.power_settings_new),
                       ),
                     ),
                   )
