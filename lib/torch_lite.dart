@@ -13,6 +13,9 @@ class _torchState extends State<torch> {
   final textColor = const Color(0xffE7F6F2);
   var isActive = false;
   var controller = TorchController();
+
+
+
   @override
   Widget build(BuildContext context) {
     final size= MediaQuery.of(context).size;
@@ -34,8 +37,8 @@ class _torchState extends State<torch> {
                 children: [
                   Image.asset(isActive ? "assets/on.jpg" : "assets/off.jpg",
                     width: 200,
-                    height: 20,
-                    color: isActive ? null : textColor.withOpacity(0.2),
+                    height: 200,
+                    //color: isActive ? null : textColor.withOpacity(0.2),
                   ),
                   SizedBox(
                     height: size.height*0.1,
@@ -45,6 +48,7 @@ class _torchState extends State<torch> {
                     maxRadius: 45,
                     child: Transform.scale(
                       scale: 1.5,
+
                       child: IconButton(
                         onPressed: (){
                           controller.toggle();
